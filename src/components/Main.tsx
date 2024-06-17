@@ -11,7 +11,7 @@ const Main = () => {
 
     const getNews = async () => {
         try {
-            await fetch(`https://newsapi.org/v2/everything?q=${menu ? menu : "tesla"}&from=2024-04-30&sortBy=publishedAt&apiKey=a5db5418651e4a448f18ae57b108a9fc`)
+            await fetch(`https://newsapi.org/v2/everything?q=${menu ? menu : "tesla"}&sortBy=publishedAt&apiKey=a5db5418651e4a448f18ae57b108a9fc`)
                 .then(res => res.json())
                 .then(json => setNews(json ?.articles))
         } catch (err) {
